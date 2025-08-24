@@ -1,0 +1,320 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Jan Reuvers</title>
+
+    <!--Webpage icon in searchbar-->
+    <link rel="icon" href="https://img.icons8.com/nolan/64/000000/resume.png">
+
+    <!--Icons in front of tabs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../StyleSheet.css" />
+    <script type="text/javascript" src="../JavaScript.js"> </script>
+    
+    <!--Added script for image detection-->
+    <script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
+
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="Start.html"><i class="fa fa-fw fa-play"></i>Start</a>
+        <a href="Business.html"><i class="fa fa-fw fa-user"></i>Business</a>
+        <a class="active" href="Connection.html"><i class="fa fa-fw fa-plug"></i>Connection</a>
+        <a href="Technology.html"><i class="fa fa-fw fa-microchip"></i>Technology</a>
+        <a href="Project.html"><i class="fa fa-fw fa-tasks"></i>Project</a>
+        <a href="Contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    </div>
+
+    <div class="container">
+        <h1>Smart connection</h1>
+        <p>Hieronder staan alle Smart connection opdrachten<br>
+        </p>
+                
+        <hr>
+
+        <button class="collapsible">Reflectie / competentie</button>
+        <div class="content">
+
+            <h3>Innoveren / Ontwerpen: past nieuwe technologieën toe op het gebied van web, data, Cloud en AI toe op een praktijkcasus</h3>
+            <p>
+                Voor mijn opleiding “industriële automatisering” wordt voornamelijk geprogrammeerd in C#, Visual Basic, STL, ladder en functieblok. 
+                Ik ben er achter gekomen dat elke hogere programmeer taal op elkaar lijkt en je dus redelijk gemakkelijk kunt overstappen van taal. 
+                De taal HTML is volledig anders als wat ik tot nu toe heb gekregen. 
+                Het programmeren met een nieuwe taal brengt veel nieuwe uitdagingen met zich mee, waardoor ik thuis veel met mijn eigen website portfolio bezig ben geweest. 
+                De opdrachten die tijdens de workshops zijn voorgelegd, waren voor mij te gemakkelijk, maar bij elke opdracht heb ik het in mijn eigen website geïntegreerd. 
+                Het verplaatsen van deze opdrachten is een extra uitdaging, omdat kopiëren en plakken niet altijd goed afloopt. 
+                Zoals bij het herkennen van de afbeelding moest een bepaalde regel bovenaan de pagina staan, voordat deze ging functioneren naar behoren. 
+                Hierdoor heb ik dus ook meer kennis gemaakt hoe een database gekoppeld kan worden aan een bepaalde website, machine learning (artificial intelligence) met behulp van een database en hoe data wordt gebruikt over verschillende sites.
+
+            </p>
+
+
+            <h3>Innoveren / Ontwerpen: plaatst de casus in een business context</h3>
+            <p>
+                De opdrachten die tijdens de workshops zijn gemaakt hebben geen voordeel voor een bedrijf, maar de kennis die ik tijdens het programmeren heb opgedaan is wat het bedrijf zou kunnen helpen. 
+                De richting waar ik naartoe wil is het programmeren van productielijnen in de industrie. 
+                Hierbij kan de kennis die ik tijdens de workshops heb opgedaan helpen voor bijvoorbeeld een site te maken of op afstand de OEE 
+                <a href="https://www.hollandertechniek.nl/expertises/oee/" target="_blank">(Overall Equipment Effectiveness)</a>
+                 van de machine te bekijken en te monitoren.
+                
+            </p>
+            
+
+        </div>
+
+        <hr>
+
+        <button class="collapsible">week 6: afbeelding herkennen</button>
+        <div class="content">
+
+            <p>Indien hieronder geen afbeelding staat, open de pagina dan in microsoft Edge.<br />
+                
+            </p>
+
+            <!--Does not work yet--> 
+            <!--
+            <p> Voeg een url link naar een afbeelding en druk op submit.</P>
+            <input type="text" name="Afbeelding url" value="https://5.imimg.com/data5/GV/DP/MY-3831378/500ml-plastic-water-bottle-500x500.jpg" id="afbeelding" style="width: 70%;"/>
+            <label for="afbeelding" id="lblafbeelding"></label><br />
+            <button type="button" onclick="ConvertImage()">submit</button>
+
+            <p></p>-->
+
+            <!--<img src="https://www.w3schools.com/images/w3schools_green.jpg" class="card-img-top img-fluid" id="image" crossorigin="anonymous">-->
+            
+            <button type="button" class="btn btn-primary btn-lg" onclick="afbeeldingherkennen()" id="btn-detect">Detect Objects</button>
+
+            <p>The MobileNet model labeled this as
+            <span id="result">...</span> with a confidence of
+            <span id="probability">...</span></p>
+            
+            <img src="https://5.imimg.com/data5/GV/DP/MY-3831378/500ml-plastic-water-bottle-500x500.jpg" alt="Detect this image" id="image" crossorigin="anonymous" class="card-img-top img-fluid" style="width: 40%; height: 40%;">
+                     
+        </div>
+
+        <hr>
+        
+        <button class="collapsible">week 6: Mogelijkheden voor machine learning</button>
+        <div class="content">
+        
+            <p>
+                Machinelearning wordt steeds meer gebruikt, omdat dit de toekomst is. Een goed voorbeeld om te laten zien wat machine learning is, is een computer die het eerste level van het spel ‘the Worlds Hardest Game’ probeert te halen. Hierin worden meerdere oplossingen aangeboden en telkens wordt de beste gekozen om zo  verder te gaan.
+
+            </p>
+
+            <h3>Robots</h3>
+            <p>
+                Om robot armen iets simpels te laten doen zoals het dicht vouwen van een boek word veel geoefend. Na veel ‘trail and error’ kan de robot iets simpels, maar het is natuurlijk de bedoeling dat deze net zo slim worden als de mens.
+                <br>
+                Een mooi begin is het overnemen van de customer service. Hiervoor kan een chatbot gebruikt worden die luistert naar wat de klant zegt en deze de juiste richting heen stuurt of de klant met de juiste persoon in contact brengt.
+
+            </p>
+
+            <h3>Conclusie</h3>
+            <p>
+                Machine learning wordt de toekomst, maar het is nog ver van werkend. Er zijn verschillende toepassingen die gebruikt worden, maar hier wordt nog menselijke opzichter bij indien het fout gaat.
+                <br>
+            </p>
+
+
+            <h3>Bibliografie</h3>
+
+            <a href="https://www.youtube.com/watch?v=Yo2SepcNyw4" target="_blank">AI Learns to play the Worlds Hardest Game. (n.d.). Retrieved from youtube: https://www.youtube.com/watch?v=Yo2SepcNyw4<br>
+                <br>
+            </a>
+
+            <a href="https://www.zendesk.nl/blog/machine-learning-used-customer-service/" target="_blank">machine learning used customer service. (n.d.). Retrieved from zendesk: https://www.zendesk.nl/blog/machine-learning-used-customer-service/<br>
+                <br>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=HX6M4QunVmA" target="_blank">The Robot Revolution: The New Age of Manufacturing | Moving Upstream. (n.d.). Retrieved from youtube: https://www.youtube.com/watch?v=HX6M4QunVmA<br>
+                <br>
+            </a>
+
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rP8CGyDbxBY"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yo2SepcNyw4"></iframe>
+
+        </div>
+
+        <hr>
+        
+        <button class="collapsible">week 5: Json weather</button>
+        <div class="content">
+        
+            <div class="weatherBody">
+                <div id="weather">
+                    <div id="description"></div>
+                    <h1 id="temp"></h1>
+                    <div id="location"></div>
+                </div>
+
+                <script lang="text/javascript">
+                    weatherBalloon(2744514); /*Location 2744514 (Wijchen)*/
+                </script>
+
+                <p>
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+        
+        <button class="collapsible">week 3: Java in HTML</button>
+        <div class="content">
+
+            <input type="number" id="numberX" value="1" name="x"> <br>
+            <input type="number" id="numberY" value="3" name="y"> <br>
+
+            <a href="#" class="ConWeek2" onclick="alert(JavaAdd())">druk hier om te zien hoeveel het opgeteld is!!</a>
+
+            <p>
+                <br>
+            </p>
+
+            <button type="button" onclick="JavaGetDate()">Klik hier om de huidige datum en tijd te zien.</button>
+            <div id="CurrentTime">
+                <p>Klik op de knop om de tijd te zien</p>
+            </div>
+
+            <p>
+                <br>
+            </p>
+
+            <h3>Is het tijd voor bier?<br>
+            </h3>
+
+
+            <div id="ItIsTime">
+                <p>Er is een fout ontstaan in het programma.</p>
+            </div>
+
+            <script type="text/javascript">
+                BeerTime();
+
+            </script>
+            <p>
+                <br>
+            </p>
+        </div>
+
+        <hr>
+        
+        <button class="collapsible">week 2: begin van HTML gemaakt</button>
+        <div class="content">
+
+            <p>Start van de site gemaakt. Dit wordt gedurende de opleiding verbetert</p>
+
+            <p>De link naar mijn eerste ontwerp staat
+                <a href="OldPortfolio/index.html" target="_blank"> hier</a>
+
+            </p>
+
+        </div>
+
+        <hr>
+        
+        <button class="collapsible">week 1: ontwerp website</button>
+        <div class="content">
+
+            <img src="../Images/week1.jpg" alt="opdracht week1" style="width: 70%; height: 70%;">
+        </div>
+
+    </div>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <a href="https://www.han.nl/" target="_blank">
+                <img src="../Images/HAN-Logo.png"></a>
+            <a href="https://www.avans.nl/" target="_blank">
+                <img src="../Images/Avans_Logo.png"></a>
+            <h3>Portfolio<span> Jan Reuvers</span></h3>
+
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>
+
+                    Wijchen
+                </p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+31 610802914</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:jj.reuvers1@student.avans.nl">jj.reuvers1@student.avans.nl</a></p>
+            </div>
+            <div>
+                <i class="fa fa-camera"></i>
+                <p><a href="https://www.raysfotografie.com/" target="_blank">https://www.raysfotografie.com/</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/jan.reuvers16" target="_blank"><i class="fa fa-facebook"></i></a>
+
+                <a href="https://www.linkedin.com/in/jan-reuvers/" target="_blank"><i class="fa fa-linkedin"></i></a>
+
+            </div>
+            
+            
+            <!-- hitwebcounter Code START -->
+            <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=7179233&style=0025&nbdigits=3&type=page&initCount=0" title="Visits Count" Alt="analytics counter"   border="0" >
+            </a>     
+            
+            <br /><br />                      
+            
+            <!-- hitwebcounter Code START -->
+            <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=7180899&style=0025&nbdigits=3&type=ip&initCount=0" title="Total Visits" Alt=" counter Visits"   border="0" >
+            </a>                     
+              
+
+            <!--Creative commons-->
+            <p class="footer-company-about">
+                <br />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    <img alt="Creative Commons License" style="border-width: 0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License
+                </a>
+
+            </p>
+
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+
+</body>
+</html>
