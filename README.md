@@ -10,3 +10,4 @@ Zelfstandige portfoliosite voor fotograaf Rayline Spoorenberg.
 - `assets/img` — geoptimaliseerde lokale portfoliofoto's
 
 De site heeft geen Wix- of andere platformafhankelijkheid en kan als statische site worden gehost.
+
