@@ -3,7 +3,7 @@
 const A = name => `https://static.wixstatic.com/media/${name}/v1/fit/w_2000,h_2000,q_85/${name}`;
 const galleries = {
   reizen: {
-    title: 'Reizen', cover: 'c23d13_d9da1a2fe6a143f0976b9b4ea1678bbe~mv2_d_5408_3600_s_4_2.jpg',
+    title: 'Reizen', cover: 'c23d13_ee8e22faef0e49f9be16beedf5d9adbe~mv2_d_5966_3977_s_4_2.jpg',
     titleEn: 'Travel',
     captions: [
       ['Timor-Leste','Timor-Leste'],['Indonesië','Indonesia'],['Manchester/Liverpool','Manchester/Liverpool'],
