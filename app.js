@@ -66,4 +66,11 @@ document.addEventListener('keydown',e=>{if(!lightbox.open)return;if(e.key==='Arr
 const menu=document.querySelector('.main-nav'),menuButton=document.querySelector('.menu-button');menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('open');menuButton.setAttribute('aria-expanded',open)});menu.addEventListener('click',()=>menu.classList.remove('open'));
 document.querySelector('#contact-form').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget),subject=encodeURIComponent(`Fotografie aanvraag van ${d.get('name')}`),body=encodeURIComponent(`Naam: ${d.get('name')}\nE-mail: ${d.get('email')}\n\n${d.get('message')}`);window.location.href=`mailto:raylinespoorenberg@gmail.com?subject=${subject}&body=${body}`});
 document.querySelector('#year').textContent=new Date().getFullYear();
+const todoToggle=document.querySelector('#todo-toggle'),todoPanel=document.querySelector('#todo-panel'),todoList=document.querySelector('#todo-list'),todoEmpty=document.querySelector('#todo-empty');
+let todos=[];
+function renderTodos(){todoList.innerHTML=todos.map(todo=>`<li class="${todo.done?'done':''}"><span class="todo-status">${todo.done?'✓':''}</span><span class="todo-text"></span></li>`).join('');[...todoList.children].forEach((li,index)=>li.querySelector('.todo-text').textContent=todos[index].text);todoEmpty.hidden=todos.length>0}
+async function loadTodos(){try{const response=await fetch(`data/todo.json?v=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('Todo-bestand niet gevonden');const data=await response.json();todos=Array.isArray(data.todos)?data.todos:[];renderTodos()}catch(error){todoEmpty.hidden=false;todoEmpty.textContent='Todo-lijst kon niet worden geladen.'}}
+function openTodos(open){todoPanel.hidden=!open;todoToggle.setAttribute('aria-expanded',String(open));if(open)loadTodos()}
+todoToggle.addEventListener('click',()=>openTodos(todoPanel.hidden));document.querySelector('#todo-close').addEventListener('click',()=>openTodos(false));
+loadTodos();
 const initial=location.hash.slice(1);if(galleries[initial])setTimeout(()=>showGallery(initial),250);
