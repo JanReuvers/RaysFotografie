@@ -69,8 +69,11 @@ document.querySelector('#year').textContent=new Date().getFullYear();
 const todoToggle=document.querySelector('#todo-toggle'),todoPanel=document.querySelector('#todo-panel'),todoList=document.querySelector('#todo-list'),todoEmpty=document.querySelector('#todo-empty');
 let todos=[];
 function renderTodos(){todoList.innerHTML=todos.map(todo=>`<li class="${todo.done?'done':''}"><span class="todo-status">${todo.done?'✓':''}</span><span class="todo-text"></span></li>`).join('');[...todoList.children].forEach((li,index)=>li.querySelector('.todo-text').textContent=todos[index].text);todoEmpty.hidden=todos.length>0}
-async function loadTodos(){try{const response=await fetch(`data/todo.json?v=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('Todo-bestand niet gevonden');const data=await response.json();todos=Array.isArray(data.todos)?data.todos:[];renderTodos()}catch(error){todoEmpty.hidden=false;todoEmpty.textContent='Todo-lijst kon niet worden geladen.'}}
+async function loadTodos(){try{const response=await fetch(`data/todo.md?v=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('Todo-bestand niet gevonden');const content=await response.text();todos=content.split(/\r?\n/).map(line=>line.match(/^\s*-\s*\[([ xX])\]\s+(.+)$/)).filter(Boolean).map(match=>({done:match[1].toLowerCase()==='x',text:match[2].trim()}));renderTodos()}catch(error){todoEmpty.hidden=false;todoEmpty.textContent='Todo-lijst kon niet worden geladen.'}}
 function openTodos(open){todoPanel.hidden=!open;todoToggle.setAttribute('aria-expanded',String(open));if(open)loadTodos()}
 todoToggle.addEventListener('click',()=>openTodos(todoPanel.hidden));document.querySelector('#todo-close').addEventListener('click',()=>openTodos(false));
 loadTodos();
+const backToTop=document.querySelector('#back-to-top');
+function updateBackToTop(){backToTop.classList.toggle('visible',window.scrollY>500)}
+window.addEventListener('scroll',updateBackToTop,{passive:true});backToTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));updateBackToTop();
 const initial=location.hash.slice(1);if(galleries[initial])setTimeout(()=>showGallery(initial),250);
